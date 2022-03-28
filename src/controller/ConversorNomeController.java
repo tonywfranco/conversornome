@@ -279,8 +279,11 @@ public class ConversorNomeController implements Initializable, Comparator<Palavr
         String newtxt56 = newtxt55.replaceAll("õ", "o");
         String newtxt57 = newtxt56.replaceAll("Ã", "a");
         String newtxt58 = newtxt57.replaceAll("__", "_");
+        String newtxt59 = newtxt58.replaceAll("\\(", "");
+        String newtxt60 = newtxt59.replaceAll("\\)", "");
+        String newtxt61 = newtxt60.replaceAll("\\*", "");
 
-        txTextoConv.setText(newtxt58);
+        txTextoConv.setText(newtxt61);
     }
 
     @Override
