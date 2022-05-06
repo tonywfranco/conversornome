@@ -164,6 +164,7 @@ public class ConversorNomeController implements Initializable, Comparator<Palavr
 
     private void convertePalavras() {
         String a = txHash1.getText();
+        a = a.replaceAll("-", "");
         a = a.replaceAll(" ", "");
         a = a.replaceAll(",", "#");
         a = a.replaceAll("#", " #");
