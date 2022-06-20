@@ -166,6 +166,8 @@ public class ConversorNomeController implements Initializable, Comparator<Palavr
         String a = txHash1.getText();
         a = a.replaceAll("-", "");
         a = a.replaceAll(" ", "");
+        a = a.replaceAll("/", "");
+        a = a.replaceAll("\\.", "");
         a = a.replaceAll(",", "#");
         a = a.replaceAll("#", " #");
         String b = "#";
@@ -295,8 +297,10 @@ public class ConversorNomeController implements Initializable, Comparator<Palavr
         String newtxt71 = newtxt70.replaceAll("/?", "");
         String newtxt72 = newtxt71.replaceAll("\\?", "_");
         String newtxt73 = newtxt72.replaceAll("__", "_");
+        String newtxt74 = newtxt73.replaceAll("\\[", "");
+        String newtxt75 = newtxt74.replaceAll("]", "");
 
-        txTextoConv.setText(newtxt73);
+        txTextoConv.setText(newtxt75);
     }
 
     @Override
